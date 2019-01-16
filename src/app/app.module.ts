@@ -8,7 +8,7 @@ import { ResourcesListComponent } from './resources/resources-list/resources-lis
 import { ResourcesDetailsComponent } from './resources/resources-details/resources-details.component';
 import { ResourcesItemComponent } from './resources/resources-list/resources-item/resources-item.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
-import { ResourceEditComponent } from './resource-roadmap/resource-edit/resource-edit.component';
+import { RoadmapEditComponent } from './resource-roadmap/roadmap-edit/roadmap-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ResourceEditComponent } from './resource-roadmap/resource-edit/resource
     ResourcesDetailsComponent,
     ResourcesItemComponent,
     ResourceRoadmapComponent,
-    ResourceEditComponent
+    RoadmapEditComponent
   ],
   imports: [
     BrowserModule

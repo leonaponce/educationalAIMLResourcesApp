@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-resource-edit',
-  templateUrl: './resource-edit.component.html',
-  styleUrls: ['./resource-edit.component.css']
+  selector: 'app-roadmap-edit',
+  templateUrl: './roadmap-edit.component.html',
+  styleUrls: ['./roadmap-edit.component.css']
 })
-export class ResourceEditComponent implements OnInit {
+export class RoadmapEditComponent implements OnInit {
 
   constructor() { }
 
