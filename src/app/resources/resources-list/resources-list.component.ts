@@ -9,7 +9,7 @@ import { Resource } from '../resource.model';
 })
 export class ResourcesListComponent implements OnInit {
   resources: Resource[] = [
-    new Resource('A test resource', 'Siraj recommended this resource', 'https://pixabay.com/photo-2228610/')
+    new Resource('A test resource', 'This is simply a test', 'https://pixabay.com/photo-2228610/')
   ];
   constructor() { }
 
