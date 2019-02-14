@@ -15,4 +15,4 @@ export class RoadmapEditComponent implements OnInit {
 }
 
 //'./roadmap-edit.component.html',
-'./resource-roadmap/roadmap-edit/roadmap-edit.component';
+//'./resource-roadmap/roadmap-edit/roadmap-edit.component';

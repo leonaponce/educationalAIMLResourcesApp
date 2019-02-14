@@ -3,11 +3,12 @@
     <button class="btn btn-success">New Rescource</button>
   </div>
 </div>
+
 <div class="row">
    <div class="col-xs-12">
     <a
       href="#"
-      class="list-group-item clearfix">
+      class="list-group-item clearfix"
       *ngFor="let resource of resources">
       <div class="pull-left">
         <h4 class="list-group-item-heading">{{ resource.name }}</h4>
@@ -15,10 +16,10 @@
       </div>
       <span class="pull-right">
         <img
-        src="{{ resource.imagePath }}"
-        alt="{{ resource.name }}" 
-        class="img-responsive">
-        style="max-height: 50px;">
+          [src]="resource.imagePath"
+          alt="{{ resource.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
       <span>
     </a>
     <app-resources-item></app-resources-item>
