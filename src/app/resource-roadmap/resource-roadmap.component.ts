@@ -1,3 +1,4 @@
+/*
 import { Component, OnInit } from '@angular/core';
 
 import { ConceptualCheckpoints } from '../shared/ConceptualCheckpoints.model';
@@ -20,3 +21,4 @@ export class ResourceRoadmapComponent implements OnInit {
   }
 
 }
+*/
