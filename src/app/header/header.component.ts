@@ -1,10 +1,11 @@
-// core/navbar.component.ts
-/*import { Component } from '@angular/core';
+//core/navbar.component.ts
+
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html'
 })
+
 export class HeaderComponent {
-   }
-*/
+}

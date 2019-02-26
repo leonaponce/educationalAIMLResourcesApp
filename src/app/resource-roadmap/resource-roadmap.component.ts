@@ -1,7 +1,7 @@
-/*
+
 import { Component, OnInit } from '@angular/core';
 
-import { ConceptualCheckpoints } from '../shared/ConceptualCheckpoints.model';
+/*import { ConceptualCheckpoints } from '../shared/ConceptualCheckpoints.model';*/
 
 @Component({
   selector: 'app-resource-roadmap',
@@ -10,10 +10,10 @@ import { ConceptualCheckpoints } from '../shared/ConceptualCheckpoints.model';
 })
 
 export class ResourceRoadmapComponent implements OnInit {
-  ConceptualCheckpoints = ConceptualCheckpoints [] = [
+  /*ConceptualCheckpoints = ConceptualCheckpoints [] = [
     new ConceptualCheckpoints('Python Basics', 5),
     new ConceptualCheckpoints('Machine Learning Basics', 5),
-  ]
+  ]*/
 
   constructor() { }
 
@@ -21,4 +21,3 @@ export class ResourceRoadmapComponent implements OnInit {
   }
 
 }
-*/

@@ -1,4 +1,4 @@
-/*export class Resource {
+export class Resource {
   public name: string;
   public description: string;
   public imagePath: string;
@@ -9,4 +9,3 @@
     this.imagePath = imagePath;
   }
 }
-*/

@@ -1,4 +1,4 @@
-/*import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Resource } from '../resource.model';
 
@@ -19,4 +19,3 @@ export class ResourcesListComponent implements OnInit {
   }
 
 }
-*/
