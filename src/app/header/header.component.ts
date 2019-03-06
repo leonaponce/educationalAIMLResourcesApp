@@ -1,6 +1,6 @@
 //core/navbar.component.ts
 
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  featureSelected = new EventEmitter<string>();
+  onselect(feature: string) {
+
+  }
 }
