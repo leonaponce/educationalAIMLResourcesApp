@@ -10,10 +10,12 @@ import { ResourcesDetailsComponent } from './resources/resources-details/resourc
 import { ResourcesItemComponent } from './resources/resources-list/resources-item/resources-item.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
 import { RoadmapEditComponent } from './resource-roadmap/roadmap-edit/roadmap-edit.component';
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ServerComponent,
     HeaderComponent,
     ResourcesComponent,
     ResourcesListComponent,
