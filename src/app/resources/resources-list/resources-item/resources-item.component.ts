@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Resource } from '../../resource.model';
 
 @Component({
   selector: 'app-resources-item',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resources-item.component.css']
 })
 export class ResourcesItemComponent implements OnInit {
-
+  @Input() resource: Resource;
+  
   constructor() { }
 
   ngOnInit() {
