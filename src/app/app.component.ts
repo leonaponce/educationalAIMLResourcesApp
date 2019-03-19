@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loadedFeature = 'resource';
+  loadedFeature = 'resource'; //allows us to store the feature
   
   onNagivate(feature: string) {
     this.loadedFeature = feature;
