@@ -11,6 +11,7 @@ import { ResourcesItemComponent } from './resources/resources-list/resources-ite
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
 import { RoadmapEditComponent } from './resource-roadmap/roadmap-edit/roadmap-edit.component';
 import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ServerComponent } from './server/server.component';
     ResourcesDetailsComponent,
     ResourcesItemComponent,
     ResourceRoadmapComponent,
-    RoadmapEditComponent
+    RoadmapEditComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,

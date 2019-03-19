@@ -1,5 +1,3 @@
-//core/navbar.component.ts
-
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -14,3 +12,4 @@ export class HeaderComponent {
     this.featureSelected.emit(feature);
   }
 }
+
