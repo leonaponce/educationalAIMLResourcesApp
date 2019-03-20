@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+
 import { Resource } from '../../resource.model';
 
 @Component({
@@ -8,13 +9,13 @@ import { Resource } from '../../resource.model';
 })
 export class ResourcesItemComponent implements OnInit {
   @Input() resource: Resource;
-  resourceSelected = new EventEmitter<void>();
+  @Output() resourceSelected = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
   }
 
   onSelected() {
-
+    this.resourceSelected.emit();
   }
 }
