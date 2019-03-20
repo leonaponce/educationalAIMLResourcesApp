@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 import { Resource } from '../resource.model';
 
@@ -8,6 +8,7 @@ import { Resource } from '../resource.model';
   styleUrls: ['./resources-list.component.css']
 })
 export class ResourcesListComponent implements OnInit {
+  resourceWasSelected = new EventEmitter<Resource>();
   resources: Resource[] = [
     new Resource("Kaggle Python Mini-Course", "Delve into Data Science's most important language", "https://pixabay.com/photo-2228610/"),
     new Resource("Kaggle Machine Learning Mini-Course", "Explore Data Science's hottest field", "https://pixabay.com/photo-2228610/"),
@@ -19,6 +20,6 @@ export class ResourcesListComponent implements OnInit {
   }
   
   onResourceSelected() {
-    
+
   }
 }
