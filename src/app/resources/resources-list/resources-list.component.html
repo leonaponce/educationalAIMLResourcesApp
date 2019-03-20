@@ -9,7 +9,7 @@
     <app-resources-item
     *ngFor="let resourceEl of resources"
     [resource]="resourceEl"
-    (resourceSelected)=""></app-resources-item>
+    (resourceSelected)="onResourceSelected(resourceEl)"></app-resources-item>
    </div>
 </div>
 

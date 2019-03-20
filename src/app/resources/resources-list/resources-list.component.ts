@@ -17,5 +17,8 @@ export class ResourcesListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  onResourceSelected() {
+    
+  }
 }
