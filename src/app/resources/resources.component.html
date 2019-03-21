@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-md-5">
     <app-resources-list
-    (resourceWasSelected)=""></app-resources-list>
+       (resourceWasSelected)="selectedResource = $event"></app-resources-list>
   </div>
   <div class="col-md-7">
-   <app-resources-details></app-resources-details>
+   <app-resources-details
+   *ngIf= "selectedResource; else infoText"></app-resources-details>
+   <ng-template #infoText>
+     <p>Please select a Resource!</p>
+   </ng-template>
   </div>
 </div>

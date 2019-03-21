@@ -7,10 +7,12 @@ import { Resource } from './resource.model';
   styleUrls: ['./resources.component.css']
 })
 export class ResourcesComponent implements OnInit {
-  selectedResource: Resource
+  selectedResource: Resource;
+  
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+ 
