@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Resource } from './resource.model';
 
 @Component({
   selector: 'app-resources',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resources.component.css']
 })
 export class ResourcesComponent implements OnInit {
-
+  selectedResource: Resource
   constructor() { }
 
   ngOnInit() {
