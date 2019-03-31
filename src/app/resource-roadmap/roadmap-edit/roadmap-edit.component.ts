@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./roadmap-edit.component.css']
 })
 export class RoadmapEditComponent implements OnInit {
-
+  nameInputRef: 
   constructor() { }
 
   ngOnInit() {
