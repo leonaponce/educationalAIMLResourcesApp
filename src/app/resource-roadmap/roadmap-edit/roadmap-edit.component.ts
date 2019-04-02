@@ -20,7 +20,7 @@ export class RoadmapEditComponent implements OnInit {
   
   onAddItem() {
     const ingName= this.nameInputRef.nativeElement.value;
-    const ingAmount= this.nameInputRef.nativeElement.value;
+    const ingAmount= this.amountInputRef.nativeElement.value;
     const newConceptualCheckpoints = new ConceptualCheckpoints(ingName, ingAmount);
     this.conceptualCheckpointsAdded.emit(newConceptualCheckpoints);
   }
