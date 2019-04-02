@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-roadmap-edit',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./roadmap-edit.component.css']
 })
 export class RoadmapEditComponent implements OnInit {
-  nameInputRef: 
+  @ViewChild('nameInput') nameInputRef: ElementRef;
+  @ViewChild('amountInput') amountInputRef: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  onAddItem() {
+   
+  }
 }
 
 //'./roadmap-edit.component.html',
