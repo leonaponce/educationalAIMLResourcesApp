@@ -23,5 +23,6 @@ export class ResourcesListComponent implements OnInit {
   onResourceSelected(resource: Resource) {
     this.resourceWasSelected.emit(resource);
   }
+  
 }
 
