@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ResourcesComponent } from './resources/resources.component';
@@ -12,6 +13,7 @@ import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.co
 import { RoadmapEditComponent } from './resource-roadmap/roadmap-edit/roadmap-edit.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ServersComponent } from './servers/servers.component';
     ResourceRoadmapComponent,
     RoadmapEditComponent,
     ServersComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
