@@ -26,7 +26,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     ResourcesItemComponent,
     ResourceRoadmapComponent,
     RoadmapEditComponent,
-    ServersComponent
+    ServersComponent,
     DropdownDirective
   ],
   imports: [
