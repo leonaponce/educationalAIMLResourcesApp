@@ -9,7 +9,7 @@ import { ConceptualCheckpoints } from '../shared/conceptualcheckpoints.module'
 })
 
 export class ResourceRoadmapComponent implements OnInit {
-  conceptualcheckpoints = ConceptualCheckpoints[] = [
+  conceptualcheckpoints: ConceptualCheckpoints[] = [
     new ConceptualCheckpoints('Python Basics', 5),
     new ConceptualCheckpoints('Machine Learning Basics', 5),
   ];
