@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { Resource } from './resource.model';
-import { ConceptualCheckpoints } from '../shared/conceptualcheckpoint.model';
+import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.service';
 
 @Injectable()
