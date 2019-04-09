@@ -1,6 +1,7 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Resource } from '../resource.model';
+import { ResourceService } from '../resources.service';
 
 @Component({
   selector: 'app-resources-list',
@@ -8,18 +9,14 @@ import { Resource } from '../resource.model';
   styleUrls: ['./resources-list.component.css']
 })
 export class ResourcesListComponent implements OnInit {
-  @Output()resourceWasSelected = new EventEmitter<Resource>();
   resources: Resource[];
 
-  constructor(private resourcesService: ResourcesService) { }
+  constructor(private resourcesService: ResourcesService) { 
+  }
 
   ngOnInit() {
      this.resources = this.resourcesService.getResources();
   }
-  
-  onResourceSelected(resource: Resource) {
-    this.resourceWasSelected.emit(resource);
-  }
-  
 }
 
+caches

@@ -10,12 +10,12 @@ import { Resource } from '../../resource.model';
 export class ResourcesItemComponent implements OnInit {
   @Input() resource: Resource;
   
-  constructor() { }
+  constructor(private resourceService: ResourcesService) { }
 
   ngOnInit() {
   }
 
   onSelected() {
-    
+    this.resourceService.recipeSelected.emit(this.resource);
   }
 }
