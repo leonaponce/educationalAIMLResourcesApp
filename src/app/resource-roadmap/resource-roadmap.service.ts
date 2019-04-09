@@ -1,4 +1,4 @@
-import { Resources } from './resources.model';
+import { Resources } from './resource.model';
 
 export class ResourceRoadmapService {
     private resources: Resource[] = [
