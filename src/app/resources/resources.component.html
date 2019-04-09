@@ -3,7 +3,7 @@
     <app-resource-list></app-resource-list>
   </div>
   <div class="col-md-7">
-   <app-resource-details
+   <app-resource-detail
     *ngIf= "selectedResource; else infoText">
     [resource]="selectedResource"></app-resource-detail>
    <ng-template #infoText>

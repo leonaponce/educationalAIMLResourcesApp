@@ -24,4 +24,4 @@ addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
       this.conceptualCheckpoints.push(...conceptualCheckpoints);
       this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
     }
-}
+  }

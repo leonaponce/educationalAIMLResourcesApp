@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Resource } from '../resource.model';
-import { ResourceService } from '../resources.service';
+import { ResourceService } from '../resource.service';
 
 @Component({
   selector: 'app-resources-list',
   templateUrl: './resources-list.component.html',
   styleUrls: ['./resources-list.component.css']
 })
-export class ResourcesListComponent implements OnInit {
+export class ResourceListComponent implements OnInit {
   resources: Resource[];
 
-  constructor(private resourcesService: ResourcesService) { 
+  constructor(private resourceService: ResourceService) { 
   }
 
   ngOnInit() {
-     this.resources = this.resourcesService.getResources();
+     this.resources = this.resourceService.getResources();
   }
 }
 
-caches
