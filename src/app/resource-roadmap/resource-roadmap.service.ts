@@ -1,4 +1,4 @@
-import { ConceptualCheckpoints } from '../shared/conceptualcheckpoints.module';
+import { ConceptualCheckpoints } from '../../shared/conceptualcheckpoints.module';
 
 export class ResourceRoadmapService {
     private conceptualcheckpoints: ConceptualCheckpoints[] = [

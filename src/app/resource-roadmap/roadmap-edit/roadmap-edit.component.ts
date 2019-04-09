@@ -1,7 +1,7 @@
 
-import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
-import { ConceptualCheckpoints } from 'src/app/shared/conceptualcheckpoints.module';
+import { ConceptualCheckpoints } from '../../conceptualcheckpoints.module';
 
 @Component({
   selector: 'app-roadmap-edit',
@@ -11,7 +11,6 @@ import { ConceptualCheckpoints } from 'src/app/shared/conceptualcheckpoints.modu
 export class RoadmapEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
-  @Output() conceptualCheckpointsAdded = new EventEmitter<ConceptualCheckpoints>();
 
   constructor() { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ConceptualCheckpoints } from '../shared/conceptualcheckpoints.module';
+import { Resource-RoadmapService } from './resouce-roadmap.service';
 
 @Component({
   selector: 'app-resource-roadmap',
