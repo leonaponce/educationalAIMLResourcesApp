@@ -18,7 +18,9 @@ export class ResourcesComponent implements OnInit {
   ngOnInit() {
     this.resourcesService.resourcesSelected
       .subscribe(
-         (resource: Resource)
+         (resource: Resource) => { 
+          this.selectedResource = resource;
+         }
       );
   }
 
