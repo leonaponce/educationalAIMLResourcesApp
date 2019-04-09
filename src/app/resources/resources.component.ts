@@ -13,9 +13,13 @@ import { ResourcesService } from './resources.service';
 export class ResourcesComponent implements OnInit {
   selectedResource: Resource;
   
-  constructor() { }
+  constructor(private resourcesService: ResourcesService) { }
 
   ngOnInit() {
+    this.resourcesService.resourcesSelected
+      .subscribe(
+         (resource: Resource)
+      );
   }
 
 }

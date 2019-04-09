@@ -11,11 +11,9 @@ export class ResourceService {
         new Resource("Kaggle Deep Learning Mini-Course", "Impress yourself with your new Tensorflow skills", "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff0%2Fdb%2Ff5%2Ff0dbf54f437965521e9aa5d6da2cf6c6.png&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F761178774498179725%2F&docid=D2Hql9jdfvZC3M&tbnid=OQqgQaqPcxlB3M%3A&vet=10ahUKEwje4eiMh8LhAhUPtlkKHYKqDXUQMwhXKAEwAQ..i&w=2000&h=1239&bih=390&biw=1800&q=deep%20learning%20logo&ved=0ahUKEwje4eiMh8LhAhUPtlkKHYKqDXUQMwhXKAEwAQ&iact=mrc&uact=8")
       ];
 
-
       getResources() {
         return this.resources.slice();
       }
     
 }
 
-]
