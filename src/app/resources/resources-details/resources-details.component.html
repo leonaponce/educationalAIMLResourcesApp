@@ -23,7 +23,7 @@
         Manage Resource <span class="caret"></span>
        </button>
        <ul class="dropdown-menu">
-        <li><a href="#">Add Conceptual Checkpoint to Roadmap</a></li>
+        <li><a (click)="onAddToResourceRoadmap()" style="cursor: pointer;">Add Conceptual Checkpoint to Roadmap</a></li>
         <li><a href="#">Edit Resource</a></li>
         <li><a href="#">Delete Resource</a></li>
        </ul>
@@ -37,6 +37,11 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Checkpoints
+    <ul class = "list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let conceptualcheckpoint of resource.conceptualcheckpoints"></li>
+        {{ conceptualcheckpoint.name}} - {{ conceptualcheckpoint.amount }}
+    </ul>
   </div>
 </div>

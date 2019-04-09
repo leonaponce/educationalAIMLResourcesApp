@@ -16,8 +16,12 @@ export class ResourceRoadmapComponent implements OnInit {
   ngOnInit() {
     this.conceptualcheckpoints = this.slService.getIngredients();
     this.slService.conceptualCheckpointsChanged
-  }
-
+      .subscribe(
+         (conceptualcheckpoints: conceptualcheckpoints[]) => {
+           this.conceptualcheckpoints = conceptualcheckpoints;
+         }
+      );
   }
 
 }
+

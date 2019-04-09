@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Resource } from '../resource.model';
+import { ResourceService } from '../resources.service';
 
 @Component({
   selector: 'app-resources-details',
@@ -8,9 +10,14 @@ import { Resource } from '../resource.model';
 })
 export class ResourcesDetailsComponent implements OnInit {
   @Input() resource: Resource;
-  constructor() { }
+
+  constructor(private resourceService: ResourceService) { }
 
   ngOnInit() {
+  }
+
+  onAddToShoppingList() {
+
   }
 
 }
