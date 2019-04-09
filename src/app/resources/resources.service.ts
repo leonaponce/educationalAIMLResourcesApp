@@ -1,8 +1,10 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 import { Resource } from './resource.model';
-import { ConceptualCheckpoints } from '../shared/conceptualcheckpoints.model';
+import { ConceptualCheckpoints } from '../shared/conceptualcheckpoint.model';
+import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.service';
 
+@Injectable()
 export class ResourceService {
     resourceSelected = new EventEmitter<Resource>();
   
@@ -33,9 +35,14 @@ export class ResourceService {
           ])
        ];
 
+      constructor(private slService: ResourceRoadmapService) {}
+
       getResources() {
         return this.resources.slice();
       }
     
+      addconceptualcheckpointsToResourceRoadmap(conceptualCheckpoints: ConceptualCheckpoints[] ) {
+         this.slService;
+      }
 }
 

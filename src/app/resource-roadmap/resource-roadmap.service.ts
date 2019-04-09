@@ -1,19 +1,25 @@
-import { ConceptualCheckpoints } from '../../shared/conceptualcheckpoints.module';
+import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { EventEmitter } from '@angular/core';
 
 export class ResourceRoadmapService {
-    conceptualCheckpointsChanged = new EventEmitter<conceptualCheckpoints[]>();
-    private conceptualcheckpoints: ConceptualCheckpoints[] = [
-      new ConceptualCheckpoints('Python Basics', 2),
-      new ConceptualCheckpoints('Machine Learning Basics', 3),
+    conceptualCheckpointsChanged = new EventEmitter<ConceptualCheckpoint[]>();
+    private conceptualCheckpoints: ConceptualCheckpoint[] = [
+      new ConceptualCheckpoint('Python Basics', 1),
+      new ConceptualCheckpoint('Machine Learning Basics', 1),
     ];
     
-    getconceptualcheckpoints() {
-       return this.conceptualcheckpoints.slice();
+    getConceptualCheckpoints() {
+       return this.conceptualCheckpoints.slice();
     }
 
-    addconceptualcheckpoints(conceptualcheckpoints: ConceptualCheckpoints) {
-       this.conceptualcheckpoints.push(conceptualcheckpoints);
-       this.conceptualCheckpointsChanged.emit(this.ingredients.slice());
+    addConceptualCheckpoint(conceptualCheckpoint: ConceptualCheckpoint) {
+       this.conceptualCheckpoints.push(conceptualCheckpoint);
+       this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
+    }
+
+/*addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
+      for (let conceptualCheckpoint of conceptualCheckpoints) {
+      this.addConceptualCheckpoint(conceptualCheckpoint);
+      }*/
     }
 }

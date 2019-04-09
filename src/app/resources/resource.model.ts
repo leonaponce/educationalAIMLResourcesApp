@@ -1,4 +1,4 @@
-import { ConceptualCheckpoints } from "../shared/conceptualcheckpoints.model";
+import { ConceptualCheckpoint } from "../shared/conceptualcheckpoint.model";
 
 export class Resource {
   public name: string;

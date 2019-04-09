@@ -17,7 +17,7 @@ export class ResourcesDetailsComponent implements OnInit {
   }
 
   onAddToShoppingList() {
-
+    this.resourceService.addconceptualcheckpointsToResourceRoadmap(this.resource.conceptualcheckpoints);
   }
 
 }
