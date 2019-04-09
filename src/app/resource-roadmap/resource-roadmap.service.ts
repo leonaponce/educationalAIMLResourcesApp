@@ -9,3 +9,8 @@ export class ResourceRoadmapService {
     getconceptualcheckpoints() {
        return this.conceptualcheckpoints.slice();
     }
+
+    addconceptualcheckpoints(conceptualcheckpoints: ConceptualCheckpoints) {
+       this.conceptualcheckpoints.push(conceptualcheckpoints);
+    }
+}
