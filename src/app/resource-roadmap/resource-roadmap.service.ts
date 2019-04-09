@@ -17,11 +17,11 @@ export class ResourceRoadmapService {
        this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
     }
 
-/*addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
-      for (let conceptualCheckpoint of conceptualCheckpoints) {
+addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
+      /*for (let conceptualCheckpoint of conceptualCheckpoints) {
       this.addConceptualCheckpoint(conceptualCheckpoint);
       }*/
-    this.conceptualCheckpoints.push(...conceptualCheckpoints);
-    this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
+      this.conceptualCheckpoints.push(...conceptualCheckpoints);
+      this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
     }
 }

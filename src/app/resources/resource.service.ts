@@ -14,8 +14,8 @@ export class ResourceService {
           "Delve into Data Science's most important language",
           "https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F2016%2F05%2FPython-Logo-PNG-Image.png&imgrefurl=http%3A%2F%2Fwww.pngall.com%2Fpython-logo-png&docid=WPCvNLNJeU88wM&tbnid=_3Pyk8wT2qcaVM%3A&vet=10ahUKEwjC2-LrhsLhAhVFnlkKHetMDRMQMwhPKAEwAQ..i&w=360&h=180&bih=390&biw=1800&q=python%20logo&ved=0ahUKEwjC2-LrhsLhAhVFnlkKHetMDRMQMwhPKAEwAQ&iact=mrc&uact=8",
           [
-            new ConceptualCheckpoints ("Python",1),
-            new ConceptualCheckpoints ("Python Applications",1) 
+            new ConceptualCheckpoint ("Python",1),
+            new ConceptualCheckpoint ("Python Applications",1) 
           ]),
         new Resource(
           "Kaggle Machine Learning Mini-Course",
