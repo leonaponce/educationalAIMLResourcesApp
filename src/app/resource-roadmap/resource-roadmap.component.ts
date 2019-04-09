@@ -15,10 +15,9 @@ export class ResourceRoadmapComponent implements OnInit {
 
   ngOnInit() {
     this.conceptualcheckpoints = this.slService.getIngredients();
+    this.slService.conceptualCheckpointsChanged
   }
 
-  onConceptualCheckpointsAdded(conceptualcheckpoints: ConceptualCheckpoints) {
-    this.conceptualcheckpoints.push(conceptualcheckpoints);
   }
 
 }
