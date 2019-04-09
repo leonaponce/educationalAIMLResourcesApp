@@ -21,5 +21,7 @@ export class ResourceRoadmapService {
       for (let conceptualCheckpoint of conceptualCheckpoints) {
       this.addConceptualCheckpoint(conceptualCheckpoint);
       }*/
+    this.conceptualCheckpoints.push(...conceptualCheckpoints);
+    this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
     }
 }
