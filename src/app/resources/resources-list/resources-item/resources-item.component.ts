@@ -1,21 +1,23 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Resource } from '../../resource.model';
+import { ResourceService } from '../../resource.service';
 
 @Component({
-  selector: 'app-resources-item',
-  templateUrl: './resources-item.component.html',
-  styleUrls: ['./resources-item.component.css']
+  selector: 'app-resource-item',
+  templateUrl: './resource-item.component.html',
+  styleUrls: ['./resource-item.component.css']
 })
-export class ResourcesItemComponent implements OnInit {
+export class ResourceItemComponent implements OnInit {
   @Input() resource: Resource;
   
-  constructor(private resourceService: ResourcesService) { }
+  constructor(private resourceService: ResourceService) { }
 
   ngOnInit() {
   }
 
   onSelected() {
-    this.resourceService.recipeSelected.emit(this.resource);
+    this.resourceService.resourceSelected.emit(this.resource);
   }
+
 }

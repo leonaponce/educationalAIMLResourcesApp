@@ -4,9 +4,9 @@ import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
 
 @Component({
-  selector: 'app-resources-list',
-  templateUrl: './resources-list.component.html',
-  styleUrls: ['./resources-list.component.css']
+  selector: 'app-resource-list',
+  templateUrl: './resource-list.component.html',
+  styleUrls: ['./resource-list.component.css']
 })
 export class ResourceListComponent implements OnInit {
   resources: Resource[];

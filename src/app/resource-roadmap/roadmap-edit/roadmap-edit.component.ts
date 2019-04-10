@@ -1,7 +1,6 @@
-
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
-import { ConceptualCheckpoints } from '../../conceptualcheckpoints.module';
+import { ConceptualCheckpoint } from '../../shared/conceptualCheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap.service';
 
 @Component({
@@ -21,8 +20,8 @@ export class RoadmapEditComponent implements OnInit {
   onAddItem() {
     const ingName= this.nameInputRef.nativeElement.value;
     const ingAmount= this.amountInputRef.nativeElement.value;
-    const newConceptualCheckpoints = new ConceptualCheckpoints(ingName, ingAmount);
-    this.slService.addconceptualcheckpoints(newConceptualCheckpoints);  
+    const newConceptualCheckpoint = new ConceptualCheckpoint(ingName, ingAmount);
+    this.slService.addConceptualCheckpoint(newConceptualCheckpoint);  
   }
 
 }

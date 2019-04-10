@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ConceptualCheckpoints } from '../shared/conceptualcheckpoints.module';
-import { Resource-RoadmapService } from './resouce-roadmap.service';
+import { ConceptualCheckpoint } from '../shared/conceptualCheckpoint.model';
+import { ResourceRoadmapService } from './resource-roadmap.service';
 
 @Component({
   selector: 'app-resource-roadmap',
@@ -9,16 +9,16 @@ import { Resource-RoadmapService } from './resouce-roadmap.service';
   styleUrls: ['./resource-roadmap.component.css']
 })
 export class ResourceRoadmapComponent implements OnInit {
-  conceptualcheckpoints: ConceptualCheckpoints[];
+  conceptualCheckpoints: ConceptualCheckpoint[];
 
-  constructor(private slService: ShoppingListService) { }
+  constructor(private slService: ResourceRoadmapService) { }
 
   ngOnInit() {
-    this.conceptualcheckpoints = this.slService.getIngredients();
+    this.conceptualCheckpoints = this.slService.getConceptualCheckpoints();
     this.slService.conceptualCheckpointsChanged
       .subscribe(
-         (conceptualcheckpoints: conceptualcheckpoints[]) => {
-           this.conceptualcheckpoints = conceptualcheckpoints;
+         (conceptualCheckpoints: ConceptualCheckpoint[]) => {
+           this.conceptualCheckpoints = conceptualCheckpoints;
          }
       );
   }

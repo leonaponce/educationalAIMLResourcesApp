@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Resource } from '../resource.model';
-import { ResourceService } from '../resources.service';
+import { ResourceService } from '../resource.service';
 
 @Component({
-  selector: 'app-resources-details',
-  templateUrl: './resources-details.component.html',
-  styleUrls: ['./resources-details.component.css']
+  selector: 'app-resource-details',
+  templateUrl: './resource-details.component.html',
+  styleUrls: ['./resource-details.component.css']
 })
-export class ResourcesDetailsComponent implements OnInit {
+export class ResourceDetailComponent implements OnInit {
   @Input() resource: Resource;
 
   constructor(private resourceService: ResourceService) { }
@@ -17,7 +17,7 @@ export class ResourcesDetailsComponent implements OnInit {
   }
 
   onAddToShoppingList() {
-    this.resourceService.addconceptualcheckpointsToResourceRoadmap(this.resource.conceptualcheckpoints);
+    this.resourceService.addConceptualCheckpointsToResourceRoadmap(this.resource.conceptualcheckpoints);
   }
 
 }

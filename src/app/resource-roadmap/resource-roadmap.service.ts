@@ -1,4 +1,4 @@
-import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
+import { ConceptualCheckpoint } from '../shared/conceptualCheckpoint.model';
 import { EventEmitter } from '@angular/core';
 
 export class ResourceRoadmapService {
@@ -17,7 +17,7 @@ export class ResourceRoadmapService {
        this.conceptualCheckpointsChanged.emit(this.conceptualCheckpoints.slice());
     }
 
-addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
+    addConceptualCheckpoints(conceptualCheckpoints: ConceptualCheckpoint[]){
       /*for (let conceptualCheckpoint of conceptualCheckpoints) {
       this.addConceptualCheckpoint(conceptualCheckpoint);
       }*/
