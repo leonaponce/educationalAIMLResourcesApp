@@ -5,7 +5,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: '/resources' },
+  { path: '', redirectTo: '/resources', pathMatch: 'full' },
   { path: 'resources', component: ResourcesComponent },
   { path: 'resource-roadmap', component: ResourceRoadmapComponent },
 ];
@@ -15,6 +15,6 @@ imports: [RouterModule.forRoot(appRoutes)],
 exports: [RouterModule]
 })
 export class AppRoutingModule {
-    
+
 }
 
