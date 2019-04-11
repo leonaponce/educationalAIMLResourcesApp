@@ -1,4 +1,4 @@
-import { ConceptualCheckpoint } from '../shared/conceptualCheckpoint.model';
+import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { EventEmitter } from '@angular/core';
 
 export class ResourceRoadmapService {

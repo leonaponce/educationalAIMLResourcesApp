@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
-import { ConceptualCheckpoint } from '../../shared/conceptualCheckpoint.model';
+import { ConceptualCheckpoint } from '../../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap.service';
 
 @Component({
