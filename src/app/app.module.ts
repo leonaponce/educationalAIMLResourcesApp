@@ -15,6 +15,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ResourceRoadmapService } from './resource-roadmap/resource-roadmap.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResourceRoadmapService } from './resource-roadmap/resource-roadmap.serv
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ResourceRoadmapService],
   bootstrap: [AppComponent]
