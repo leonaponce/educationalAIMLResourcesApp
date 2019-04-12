@@ -7,9 +7,9 @@ import { Resource } from '../../resource.model';
   templateUrl: './resources-item.component.html',
   styleUrls: ['./resources-item.component.css']
 })
-export class ResourcesItemsComponent implements OnInit {
+export class ResourcesItemComponent implements OnInit {
   @Input() resource: Resource;
-
+  @Input() index: number;
   ngOnInit() {
   }
 

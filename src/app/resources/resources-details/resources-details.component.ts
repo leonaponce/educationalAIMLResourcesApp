@@ -22,6 +22,7 @@ export class ResourcesDetailsComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = +params[ 'id' ];
+          this.resource = this.resourceService.getResources(this.id)
         }
       );
   }
