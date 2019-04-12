@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { ResourceListComponent } from './resources/resources-list/resources-list.component';
-import { ResourceDetailComponent } from './resources/resources-details/resources-details.component';
+import { ResourcesDetailsComponent } from './resources/resources-details/resources-details.component';
 import { ResourceItemComponent } from './resources/resources-list/resources-item/resources-item.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
 import { RoadmapEditComponent } from './resource-roadmap/roadmap-edit/roadmap-edit.component';
@@ -26,7 +26,7 @@ import { ResourcesStartComponent } from './resources/resources-start/resources-s
     HeaderComponent,
     ResourcesComponent,
     ResourceListComponent,
-    ResourceDetailComponent,
+    ResourcesDetailsComponent,
     ResourceItemComponent,
     ResourceRoadmapComponent,
     RoadmapEditComponent,
