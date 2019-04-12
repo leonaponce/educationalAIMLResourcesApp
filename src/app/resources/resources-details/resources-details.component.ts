@@ -17,7 +17,6 @@ export class ResourcesDetailsComponent implements OnInit {
 
   }
     
-
   ngOnInit() {
     this.route.params
       .subscribe(
