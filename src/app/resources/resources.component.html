@@ -3,11 +3,7 @@
     <app-resources-list></app-resources-list>
   </div>
   <div class="col-md-7">
-   <app-resources-details
-    *ngIf= "selectedResource; else infoText">
-    [resource]="selectedResource"></app-resources-details>
-   <ng-template #infoText>
-     <p>Please select a Resource!</p>
-   </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>
+
