@@ -11,8 +11,9 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },
   { path: 'resources', component: ResourcesComponent, children: [
     { path: '', component: ResourcesStartComponent},
+    { path: 'new', component: ResourceEditComponent },
     { path: ':id', component: ResourcesDetailsComponent},
-    { path: 'new', component: ResourceEditComponent } 
+    { path: ':id/edit', component: ResourceEditComponent } 
   ] },
   { path: 'resource-roadmap', component: ResourceRoadmapComponent },
 ];
