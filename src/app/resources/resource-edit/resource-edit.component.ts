@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resource-edit.component.css']
 })
 export class ResourceEditComponent implements OnInit {
+  id: number;
+  editMode
 
   constructor() { }
 
@@ -14,6 +16,7 @@ export class ResourceEditComponent implements OnInit {
        .subscribe(
          (params: Params) => {
             this.id = +params['id'];
+            this.editMode = params['id'] !=null;
          }
        );
   }
