@@ -16,8 +16,4 @@ export class ResourceItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelected() {
-    this.resourceService.resourceSelected.emit(this.resource);
-  }
-
 }
