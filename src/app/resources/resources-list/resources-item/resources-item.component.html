@@ -1,6 +1,7 @@
 <a 
   style="cursor: pointer;"
-  [routerLink]="[]"
+  [routerLink]="[index]"
+  routerLinkActive="active"
   class="list-group-item clearfix">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ resource.name }}</h4>
@@ -11,8 +12,7 @@
       [src]="resource.imagePath"
       alt="{{ resource.name }}"
       class="img-responsive"
-      style="max-height: 50px;"> ///?
+      style="..."> 
   </span>
 </a>
 
-//line 2?
