@@ -10,6 +10,12 @@ export class ResourceEditComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.route.params
+       .subscribe(
+         (params: Params) => {
+            this.id = +params['id'];
+         }
+       );
   }
 
 }
