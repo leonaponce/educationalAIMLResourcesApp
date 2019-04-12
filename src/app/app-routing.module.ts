@@ -8,7 +8,8 @@ import { ResourcesStartComponent } from './resources/resources-start/resources-s
 const appRoutes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },
   { path: 'resources', component: ResourcesComponent, children: [
-    {path: '', component: ResourcesStartComponent}
+    { path: '', component: ResourcesStartComponent}
+    { path: ':id', component: ResourcesDetailsComponent }
   ] },
   { path: 'resource-roadmap', component: ResourceRoadmapComponent },
 ];

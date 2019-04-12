@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
@@ -8,8 +8,8 @@ import { ResourceService } from '../resource.service';
   templateUrl: './resources-details.component.html',
   styleUrls: ['./resources-details.component.css']
 })
-export class ResourceDetailComponent implements OnInit {
-  @Input() resource: Resource;
+export class ResourcesDetailsComponent implements OnInit {
+  resource: Resource;
 
   constructor(private resourceService: ResourceService) { }
 
