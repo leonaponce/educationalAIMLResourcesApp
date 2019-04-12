@@ -6,7 +6,9 @@ import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.co
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },
-  { path: 'resources', component: ResourcesComponent },
+  { path: 'resources', component: ResourcesComponent, children: [
+    {path: ''}
+  ] },
   { path: 'resource-roadmap', component: ResourceRoadmapComponent },
 ];
 
