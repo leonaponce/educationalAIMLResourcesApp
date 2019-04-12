@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
@@ -24,3 +25,4 @@ export class ResourceListComponent implements OnInit {
   }
 }
 
+//check in on router import
