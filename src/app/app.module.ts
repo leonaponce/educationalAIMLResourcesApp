@@ -18,6 +18,7 @@ import { ResourceRoadmapService } from './resource-roadmap/resource-roadmap.serv
 import { AppRoutingModule } from './app-routing.module';
 import { ResourceStartComponent } from './resource-start/resource-start.component';
 import { ResourcesStartComponent } from './resources/resources-start/resources-start.component';
+import { ResourceEditComponent } from './resources/resource-edit/resource-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResourcesStartComponent } from './resources/resources-start/resources-s
     ServersComponent,
     DropdownDirective,
     ResourceStartComponent,
-    ResourcesStartComponent
+    ResourcesStartComponent,
+    ResourceEditComponent
   ],
   imports: [
     BrowserModule,
