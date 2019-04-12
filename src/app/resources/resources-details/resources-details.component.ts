@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/core'
 
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
@@ -11,7 +12,11 @@ import { ResourceService } from '../resource.service';
 export class ResourcesDetailsComponent implements OnInit {
   resource: Resource;
 
-  constructor(private resourceService: ResourceService) { }
+  constructor(private resourceService: ResourceService,
+              private route:ActivatedRoute) {
+
+  }
+    
 
   ngOnInit() {
   }
