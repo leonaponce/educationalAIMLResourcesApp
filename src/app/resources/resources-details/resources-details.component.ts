@@ -19,7 +19,12 @@ export class ResourcesDetailsComponent implements OnInit {
     
 
   ngOnInit() {
-    const id = this.route.snapshot.params['id'];
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id = +params[ 'id' ];
+        }
+      );
   }
 
   onAddToShoppingList() {
