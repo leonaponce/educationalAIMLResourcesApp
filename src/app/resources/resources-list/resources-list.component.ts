@@ -11,11 +11,16 @@ import { ResourceService } from '../resource.service';
 export class ResourceListComponent implements OnInit {
   resources: Resource[];
 
-  constructor(private resourceService: ResourceService) { 
+  constructor(private resourceService: ResourceService,
+    private router: Router) { 
   }
 
   ngOnInit() {
      this.resources = this.resourceService.getResources();
+  }
+
+  onNewResource() {
+
   }
 }
 
