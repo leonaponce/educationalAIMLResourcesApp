@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Resource } from './resource.model';
-
 import { ResourceService } from './resource.service';
 
 @Component({
@@ -13,10 +12,10 @@ import { ResourceService } from './resource.service';
 export class ResourcesComponent implements OnInit {
   selectedResource: Resource;
   
-  constructor(private resourcesService: ResourceService) { }
+  constructor(private resourceService: ResourceService) { }
 
   ngOnInit() {
-    this.resourcesService.resourceSelected
+    this.resourceService.resourceSelected
       .subscribe(
          (resource: Resource) => { 
           this.selectedResource = resource;
