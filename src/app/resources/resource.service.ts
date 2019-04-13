@@ -44,8 +44,8 @@ export class ResourceService {
       getResources()
         return this.resources.slice()[index];
     
-      addConceptualCheckpointsToResourceRoadmap(conceptualCheckpoints: ConceptualCheckpoint[] ) {
-         this.slService.addConceptualCheckpoints(conceptualCheckpoints);
+      addConceptualCheckpointsToResourceRoadmap(conceptualcheckpoints: ConceptualCheckpoint[] ) {
+         this.slService.addConceptualCheckpoints(conceptualcheckpoints);
       }
 }
 

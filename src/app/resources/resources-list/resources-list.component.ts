@@ -21,7 +21,7 @@ export class ResourceListComponent implements OnInit {
   }
 
   onNewResource() {
-
+    this.resources.navigate(['new'], {relativeTo: this.route}
   }
 }
 
