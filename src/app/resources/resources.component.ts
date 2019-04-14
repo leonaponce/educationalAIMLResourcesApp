@@ -10,18 +10,12 @@ import { ResourceService } from './resource.service';
   providers: [ResourceService]
 })
 export class ResourcesComponent implements OnInit {
-  selectedResource: Resource;
   
   constructor(private resourceService: ResourceService) { }
 
   ngOnInit() {
-    this.resourceService.resourceSelected
-      .subscribe(
-         (resource: Resource) => { 
-          this.selectedResource = resource;
-         }
-      );
   }
-
+    
 }
+
  

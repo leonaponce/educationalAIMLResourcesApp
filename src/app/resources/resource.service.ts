@@ -6,7 +6,6 @@ import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.ser
 
 @Injectable()
 export class ResourceService {
-    resourceSelected = new EventEmitter<Resource>();
   
     private resources: Resource[] = [
         new Resource(
