@@ -5,11 +5,11 @@ import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
 
 @Component({
-  selector: 'app-resources-details',
-  templateUrl: './resources-details.component.html',
-  styleUrls: ['./resources-details.component.css']
+  selector: 'app-resource-detail',
+  templateUrl: './resource-detail.component.html',
+  styleUrls: ['./resource-detail.component.css']
 })
-export class ResourcesDetailsComponent implements OnInit {
+export class ResourceDetailComponent implements OnInit {
   resource: Resource;
   id: number;
 
@@ -24,7 +24,7 @@ export class ResourcesDetailsComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           this.id = +params['id'];
-          this.resource = this.resourceService.getResource(this.id)
+          this.resource = this.resourceService.getResource(this.id);
         }
       );
   }
@@ -34,7 +34,7 @@ export class ResourcesDetailsComponent implements OnInit {
   }
 
   onEditResource() {
-    this.router.navigate(['edit']), {relativeTo: this.route});
+    this.router.navigate(['edit'], {relativeTo: this.route});
   }
 
 }
