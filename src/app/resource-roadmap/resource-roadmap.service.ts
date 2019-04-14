@@ -1,8 +1,9 @@
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { EventEmitter } from '@angular/core';
+import { Subject } from "rxjs/Subject";
 
 export class ResourceRoadmapService {
-    conceptualcheckpointsChanged = new EventEmitter<ConceptualCheckpoint[]>();
+    conceptualcheckpointsChanged = new Subject <ConceptualCheckpoint[]>();
     private conceptualcheckpoints: ConceptualCheckpoint[] = [
       new ConceptualCheckpoint('Python Basics', 1),
       new ConceptualCheckpoint('Machine Learning Basics', 1),
