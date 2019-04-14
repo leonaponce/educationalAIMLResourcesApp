@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+
 
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from './resource-roadmap.service';
@@ -8,7 +10,7 @@ import { ResourceRoadmapService } from './resource-roadmap.service';
   templateUrl: './resource-roadmap.component.html',
   styleUrls: ['./resource-roadmap.component.css']
 })
-export class ResourceRoadmapComponent implements OnInit {
+export class ResourceRoadmapComponent implements OnInit, OnDestroy {
   conceptualcheckpoints: ConceptualCheckpoint[];
   private subscription: Subscription
 
@@ -16,13 +18,16 @@ export class ResourceRoadmapComponent implements OnInit {
 
   ngOnInit() {
     this.conceptualcheckpoints = this.slService.getConceptualCheckpoints();
-    this.slService.conceptualcheckpointsChanged
+    this.subscription = this.slService.conceptualcheckpointsChanged
       .subscribe(
          (conceptualcheckpoints: ConceptualCheckpoint[]) => {
            this.conceptualcheckpoints = conceptualcheckpoints;
          }
       );
   }
-
+  ngOnDestroy () {
+    this.subscription.unsubscribe();
+  }
 }
+
 
