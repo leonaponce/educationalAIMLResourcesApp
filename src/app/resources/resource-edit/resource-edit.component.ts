@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-resource-edit',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourceEditComponent implements OnInit {
   id: number;
-  editMode
+  editMode = false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params
