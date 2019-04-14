@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-resources-start',
-  templateUrl: './resources-start.component.html',
-  styleUrls: ['./resources-start.component.css']
+  selector: 'app-resource-start',
+  templateUrl: './resource-start.component.html',
+  styleUrls: ['./resource-start.component.css']
 })
-export class ResourcesStartComponent implements OnInit {
+export class ResourceStartComponent implements OnInit {
 
   constructor() { }
 
