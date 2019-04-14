@@ -12,7 +12,7 @@ export class ResourceService {
         new Resource(
           "Kaggle Python Mini-Course",
           "Delve into Data Science's the most important language",
-          "https://freeicons.io/laravel/public/uploads/icons/png/12785093741551942290-128.png",
+          "https://freeicons.io/laravel/public/uploads/icons/png/6000503251553667373-128.png",
           [
             new ConceptualCheckpoint ("Python",1),
             new ConceptualCheckpoint ("Python Practice",1) 
@@ -27,7 +27,7 @@ export class ResourceService {
           ]),
           new Resource(
            "Kaggle Deep Learning Mini-Course", 
-           "Impress yourself with your new Tensorflow skills", 
+           "Learn about Tensorflow, the core open source ML library", 
            "https://freeicons.io/laravel/public/uploads/icons/png/19350075911548402146-64.png",
           [
             new ConceptualCheckpoint ("Tensorflow",1),
