@@ -9,16 +9,16 @@ import { ResourceRoadmapService } from './resource-roadmap.service';
   styleUrls: ['./resource-roadmap.component.css']
 })
 export class ResourceRoadmapComponent implements OnInit {
-  conceptualCheckpoints: ConceptualCheckpoint[];
+  conceptualcheckpoints: ConceptualCheckpoint[];
 
   constructor(private slService: ResourceRoadmapService) { }
 
   ngOnInit() {
-    this.conceptualCheckpoints = this.slService.getConceptualCheckpoints();
-    this.slService.conceptualCheckpointsChanged
+    this.conceptualcheckpoints = this.slService.getConceptualCheckpoints();
+    this.slService.conceptualcheckpointsChanged
       .subscribe(
-         (conceptualCheckpoints: ConceptualCheckpoint[]) => {
-           this.conceptualCheckpoints = conceptualCheckpoints;
+         (conceptualcheckpoints: ConceptualCheckpoint[]) => {
+           this.conceptualcheckpoints = conceptualcheckpoints;
          }
       );
   }
