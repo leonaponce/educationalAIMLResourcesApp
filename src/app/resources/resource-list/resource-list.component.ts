@@ -13,7 +13,7 @@ export class ResourceListComponent implements OnInit {
   resources: Resource[];
 
   constructor(private resourceService: ResourceService,
-              private router: Router) 
+              private router: Router,
               private route: ActivatedRoute) { 
   }
 
@@ -22,7 +22,7 @@ export class ResourceListComponent implements OnInit {
   }
 
   onNewResource() {
-    this.resource.navigate(['new'], {relativeTo: this.route}
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 }
 
