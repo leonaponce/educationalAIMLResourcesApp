@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
 
 @Component({
-  selector: 'app-resources-list',
-  templateUrl: './resources-list.component.html',
-  styleUrls: ['./resources-list.component.css']
+  selector: 'app-resource-list',
+  templateUrl: './resource-list.component.html',
+  styleUrls: ['./resource-list.component.css']
 })
 export class ResourceListComponent implements OnInit {
   resources: Resource[];
 
   constructor(private resourceService: ResourceService,
-    private router: Router) { 
+              private router: Router) 
+              private route: ActivatedRoute) { 
   }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class ResourceListComponent implements OnInit {
   }
 
   onNewResource() {
-    this.resources.navigate(['new'], {relativeTo: this.route}
+    this.resource.navigate(['new'], {relativeTo: this.route}
   }
 }
 
