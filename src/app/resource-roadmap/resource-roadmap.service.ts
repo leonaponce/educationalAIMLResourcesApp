@@ -3,6 +3,7 @@ import { Subject } from "rxjs/Subject";
 
 export class ResourceRoadmapService {
     conceptualcheckpointsChanged = new Subject <ConceptualCheckpoint[]>();
+    startedEditing = new Subject<number>();
     private conceptualcheckpoints: ConceptualCheckpoint[] = [
       new ConceptualCheckpoint('Python Basics', 1),
       new ConceptualCheckpoint('Machine Learning Basics', 1),
@@ -10,6 +11,10 @@ export class ResourceRoadmapService {
     
     getConceptualCheckpoints() {
        return this.conceptualcheckpoints.slice();
+    }
+
+    getConceptualCheckpoint(index: number) {
+      return this.conceptualcheckpoints[index];
     }
 
     addConceptualCheckpoint(conceptualcheckpoint: ConceptualCheckpoint) {
@@ -22,6 +27,16 @@ export class ResourceRoadmapService {
       this.addConceptualCheckpoint(conceptualCheckpoint);
       }*/
       this.conceptualcheckpoints.push(...conceptualcheckpoints);
+      this.conceptualcheckpointsChanged.next(this.conceptualcheckpoints.slice());
+    }
+
+    updateConceptualCheckpoint(index: number, newConceptualCheckpoint: ConceptualCheckpoint) {
+      this.conceptualcheckpoints[index] = newConceptualCheckpoint;
+      this.conceptualcheckpointsChanged.next(this.conceptualcheckpoints.slice());
+    }
+
+    deleteConcceptualCheckpoint(index: number) {
+      this.conceptualcheckpoints.splice(index, 1);
       this.conceptualcheckpointsChanged.next(this.conceptualcheckpoints.slice());
     }
   }

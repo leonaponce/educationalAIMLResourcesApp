@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+
+import { ResourceService } from '../resource.service';
 
 @Component({
   selector: 'app-resource-edit',
@@ -9,8 +12,11 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class ResourceEditComponent implements OnInit {
   id: number;
   editMode = false;
+  resourceForm: FormGroup;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private resourceService: ResourceService) {
+  }
 
   ngOnInit() {
     this.route.params
@@ -22,4 +28,22 @@ export class ResourceEditComponent implements OnInit {
        );
   }
 
+  private initForm() {
+    let resourceName = "";
+
+    if (this.editMode) {
+      const resource = this.resourceService.getResource(this.id);
+      resourceName = this.
+    }
+
+  });
+
 }
+private initForm() {
+  let resourceName = 
+  this.resourceForm = new FormGroup({
+    "name" : new FormControl()
+  });
+}
+}
+
