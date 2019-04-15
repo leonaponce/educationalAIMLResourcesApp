@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
+import { Resource } from '../resource.model';
 
 @Component({
   selector: 'app-resource-edit',
@@ -30,7 +31,12 @@ export class ResourceEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.resourceForm);
+    const newResource = new Resource(
+      this.resourceForm.value['name'], 
+      this.resourceForm.value['description']);
+    if (this.editMode) {
+      this.resourceService.updateResource(this.id)
+    }
   }
 
   onAddConceptualCheckpoint() {
