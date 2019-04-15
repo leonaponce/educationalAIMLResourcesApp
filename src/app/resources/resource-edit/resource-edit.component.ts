@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
 
@@ -33,6 +33,25 @@ export class ResourceEditComponent implements OnInit {
     console.log(this.resourceForm);
   }
 
+  onAddConceptualCheckpoint() {
+    <FormArray>this.resourceForm.get('conceptualcheckpoints')).push(
+      new FormGroup({
+        "name": new FormControl(null, [
+          Validators.required, 
+          Validators.pattern(/^[1-9]+[0-9]*$/)
+        ]), 
+        "amount": new FormControl(null, [
+          Validators.required, 
+          Validators.pattern(/^[1-9]+[0-9]*$/)
+        ])
+      })
+    );
+  }
+
+  getControls() {
+    return (<FormArray>this.resourceForm.get('conceptualcheckpoints')).controls;
+  }
+
   private initForm() {
     let resourceName = '';
     let resourceImagePath = '';
@@ -48,8 +67,11 @@ export class ResourceEditComponent implements OnInit {
       for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
         resourceConceptualConcepts.push(
           new FormGroup({
-            "name": new FormControl(resource.name),
-            "amount": new FormControl(conceptualcheckpoint.amount)
+            "name": new FormControl(resource.name, Validators.required),
+            "amount": new FormControl(conceptualcheckpoint.amount, [
+              Validators.required, 
+              Validators.pattern(/^[1-9]+[0-9]*$/)
+            ])
           })
         );
       }
@@ -57,10 +79,10 @@ export class ResourceEditComponent implements OnInit {
   }
 
   this.resourceForm = new FormGroup({
-    'name' : new FormControl(resourceName),
-    'imagePath' : new FormControl(resourceImagePath),
-    'description' : new FormControl(resourceDescription),
-    "conceptualcheckpoints" : resourceConceptualCheckpoints
+    'name' : new FormControl(resourceName, Validators.required),
+    'imagePath' : new FormControl(resourceImagePath, Validators.required),
+    'description' : new FormControl(resourceDescription, Validators.required),
+    'conceptualcheckpoints' : resourceConceptualCheckpoints
   });
 }
 
