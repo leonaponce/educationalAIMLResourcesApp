@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormArray } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
 
@@ -29,22 +29,38 @@ export class ResourceEditComponent implements OnInit {
        );
   }
 
+  onSubmit() {
+    console.log(this.resourceForm);
+  }
+
   private initForm() {
     let resourceName = '';
     let resourceImagePath = '';
     let resourceDescription = '';
+    let resourceConceptualCheckpoints = new FormArray([]);
 
   if (this.editMode) {
     const resource = this.resourceService.getResource(this.id);
     resourceName = resource.name;
     resourceImagePath = resource.imagePath;
     resourceDescription = resource.description;
+    if (resource['resources']) {
+      for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
+        resourceConceptualConcepts.push(
+          new FormGroup({
+            "name": new FormControl(resource.name),
+            "amount": new FormControl(conceptualcheckpoint.amount)
+          })
+        );
+      }
+    }
   }
 
   this.resourceForm = new FormGroup({
     'name' : new FormControl(resourceName),
     'imagePath' : new FormControl(resourceImagePath),
-    'description' : new FormControl(resourceDescription)
+    'description' : new FormControl(resourceDescription),
+    "conceptualcheckpoints" : resourceConceptualCheckpoints
   });
 }
 
