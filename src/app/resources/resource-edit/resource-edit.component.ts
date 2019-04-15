@@ -24,26 +24,28 @@ export class ResourceEditComponent implements OnInit {
          (params: Params) => {
             this.id = +params['id'];
             this.editMode = params['id'] !=null;
+            this.initForm();
          }
        );
   }
 
   private initForm() {
-    let resourceName = "";
+    let resourceName = '';
+    let resourceImagePath = '';
+    let resourceDescription = '';
 
-    if (this.editMode) {
-      const resource = this.resourceService.getResource(this.id);
-      resourceName = this.
-    }
+  if (this.editMode) {
+    const resource = this.resourceService.getResource(this.id);
+    resourceName = resource.name;
+    resourceImagePath = resource.imagePath;
+    resourceDescription = resource.description;
+  }
 
-  });
-
-}
-private initForm() {
-  let resourceName = 
   this.resourceForm = new FormGroup({
-    "name" : new FormControl()
+    'name' : new FormControl(resourceName),
+    'imagePath' : new FormControl(resourceImagePath),
+    'description' : new FormControl(resourceDescription)
   });
 }
-}
+
 
