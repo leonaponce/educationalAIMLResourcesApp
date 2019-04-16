@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router'
 import { ResourcesComponent } from './resources/resources.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
 import { ResourceStartComponent } from './resources/resource-start/resource-start.component';
-import { ResourceEditComponent } from './resources/resource-edit/resource-edit.component';
 import { ResourceDetailComponent } from './resources/resource-detail/resource-detail.component';
+import { ResourceEditComponent } from './resources/resource-edit/resource-edit.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },

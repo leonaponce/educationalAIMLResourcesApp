@@ -1,9 +1,10 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 import { Resource } from './resource.model';
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.service';
-import { Subject } from 'rxjs';
+
 
 @Injectable()
 export class ResourceService {
@@ -15,7 +16,7 @@ export class ResourceService {
           "Delve into Data Science's the most important language",
           "https://freeicons.io/laravel/public/uploads/icons/png/6000503251553667373-128.png",
           [
-            new ConceptualCheckpoint ("Python",1),
+            new ConceptualCheckpoint ("Python Basics",1),
             new ConceptualCheckpoint ("Python Practice",1) 
           ]),
         new Resource(
@@ -23,7 +24,7 @@ export class ResourceService {
           "Explore Data Science's hottest field", 
           "https://freeicons.io/laravel/public/uploads/icons/png/18589158161548402157-128.png",
           [
-            new ConceptualCheckpoint ("Machine Learning",1),
+            new ConceptualCheckpoint ("Machine Learning Basics",1),
             new ConceptualCheckpoint ("Machine Learning Practice",1) 
           ]),
           new Resource(
@@ -31,7 +32,7 @@ export class ResourceService {
            "Learn about Tensorflow, the core open source ML library", 
            "https://freeicons.io/laravel/public/uploads/icons/png/19350075911548402146-64.png",
           [
-            new ConceptualCheckpoint ("Tensorflow",1),
+            new ConceptualCheckpoint ("Tensorflow Basics",1),
             new ConceptualCheckpoint ("Tensorflow Practice",1) 
           ])
        ];
@@ -42,7 +43,7 @@ export class ResourceService {
         return this.resources.slice();
       }
 
-      getResource(index:number) { 
+      getResource(index: number) { 
         return this.resources[index];
       }
 
