@@ -37,6 +37,10 @@ export class ResourceDetailComponent implements OnInit {
     this.router.navigate(['edit'], {relativeTo: this.route});
   }
 
+  onDeleteResource() {
+    this.resourceService.deleteResource(this.id);
+  }
+
 }
 
 //router and params not imported
