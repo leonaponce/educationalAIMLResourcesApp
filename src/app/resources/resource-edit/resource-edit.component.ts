@@ -31,11 +31,15 @@ export class ResourceEditComponent implements OnInit {
   }
 
   onSubmit() {
-    const newResource = new Resource(
-      this.resourceForm.value['name'], 
-      this.resourceForm.value['description']);
+    // const newResource = new Resource(
+    //   this.resourceForm.value['name'], 
+    //   this.resourceForm.value['description']);
+    //   this.resourceForm.value['imagePath']);
+    //   this.resourceForm.value['conceptualcheckpoints']);
     if (this.editMode) {
-      this.resourceService.updateResource(this.id)
+      this.resourceService.updateResource(this.id, this.resourceForm.value);
+    } else {
+      this.resourceService.updateResource(newResource);
     }
   }
 
