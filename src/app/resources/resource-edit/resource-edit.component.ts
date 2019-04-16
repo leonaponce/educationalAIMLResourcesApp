@@ -64,6 +64,11 @@ export class ResourceEditComponent implements OnInit {
     return (<FormArray>this.resourceForm.get('conceptualcheckpoints')).controls;
   }
 
+  onDeleteConceptualCheckpoint(index: number) {
+    (<FormArray>this.resourceForm.get('conceptualcheckpoints')).removeAt(index);
+   
+  }
+
   onCancel() {
     this.router.navigate(['../'], {relativeTo: this.route});
   }
