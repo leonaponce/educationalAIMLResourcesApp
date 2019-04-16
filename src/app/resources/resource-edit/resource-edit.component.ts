@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
@@ -16,7 +16,8 @@ export class ResourceEditComponent implements OnInit {
   resourceForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
-              private resourceService: ResourceService) {
+              private resourceService: ResourceService, 
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -39,7 +40,7 @@ export class ResourceEditComponent implements OnInit {
     if (this.editMode) {
       this.resourceService.updateResource(this.id, this.resourceForm.value);
     } else {
-      this.resourceService.updateResource(newResource);
+      this.resourceService.addResource(this.resourceForm.value);
     }
   }
 
@@ -60,6 +61,10 @@ export class ResourceEditComponent implements OnInit {
 
   getControls() {
     return (<FormArray>this.resourceForm.get('conceptualcheckpoints')).controls;
+  }
+
+  onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
   private initForm() {
