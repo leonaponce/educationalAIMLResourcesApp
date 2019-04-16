@@ -12,7 +12,7 @@ import { ResourceRoadmapService } from './resource-roadmap.service';
 })
 export class ResourceRoadmapComponent implements OnInit, OnDestroy {
   conceptualcheckpoints: ConceptualCheckpoint[];
-  private subscription: Subscription
+  private subscription: Subscription;
 
   constructor(private slService: ResourceRoadmapService) { }
 

@@ -17,7 +17,7 @@ export class ResourceEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private resourceService: ResourceService, 
-    private router: Router) {
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -86,7 +86,7 @@ export class ResourceEditComponent implements OnInit {
     resourceDescription = resource.description;
     if (resource['resources']) {
       for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
-        resourceConceptualConcepts.push(
+        resourceConceptualCheckpoints.push(
           new FormGroup({
             "name": new FormControl(resource.name, Validators.required),
             "amount": new FormControl(conceptualcheckpoint.amount, [
@@ -105,5 +105,7 @@ export class ResourceEditComponent implements OnInit {
     'description' : new FormControl(resourceDescription, Validators.required),
     'conceptualcheckpoints' : resourceConceptualCheckpoints
   });
+ }
+
 }
 
