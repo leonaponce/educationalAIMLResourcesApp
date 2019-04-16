@@ -39,6 +39,7 @@ export class ResourceDetailComponent implements OnInit {
 
   onDeleteResource() {
     this.resourceService.deleteResource(this.id);
+    this.router.navigate(['/resources']);
   }
 
 }

@@ -42,6 +42,7 @@ export class ResourceEditComponent implements OnInit {
     } else {
       this.resourceService.addResource(this.resourceForm.value);
     }
+    this.onCancel();
   }
 
   onAddConceptualCheckpoint() {
