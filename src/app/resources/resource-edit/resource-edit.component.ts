@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
-import { Resource } from '../resource.model';
+
 
 @Component({
   selector: 'app-resource-edit',
