@@ -3,9 +3,11 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { Resource } from './resource.model';
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.service';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class ResourceService {
+    resourcesChanged = new Subject<Resource[]>();
   
     private resources: Resource[] = [
         new Resource(
@@ -50,10 +52,17 @@ export class ResourceService {
 
       addResource(resource: Resource) {
         this.resources.push(resource);
+        this.resourcesChanged.next(this.resources.slice());
       }
 
       updateResource(index: number, newResource: Resource) {
         this.resources[index] = newResource; 
+        this.resourcesChanged.next(this.resources.slice()); 
+      }
+
+      deleteResource(index: number) {
+        this.resources.splice(index, 1);
+        this.resourcesChanged.next(this.resources.slice());
       }
 }
 

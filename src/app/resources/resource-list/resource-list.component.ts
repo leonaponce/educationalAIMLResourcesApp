@@ -18,6 +18,12 @@ export class ResourceListComponent implements OnInit {
   }
 
   ngOnInit() {
+     this.resourceService.resourcesChanged
+       .subscribe(
+         (resources: Resource[]) => {
+           this.resources = resources;
+         }
+       );
      this.resources = this.resourceService.getResources();
   }
 
