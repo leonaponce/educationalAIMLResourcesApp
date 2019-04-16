@@ -16,6 +16,7 @@ import { ResourceRoadmapService } from './resource-roadmap/resource-roadmap.serv
 import { AppRoutingModule } from './app-routing.module';
 import { ResourceStartComponent } from './resources/resource-start/resource-start.component';
 import { ResourceEditComponent } from './resources/resource-edit/resource-edit.component';
+import { ResourceService } from './resources/resource.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ResourceEditComponent } from './resources/resource-edit/resource-edit.c
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ResourceRoadmapService],
+  providers: [ResourceRoadmapService, ResourceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
