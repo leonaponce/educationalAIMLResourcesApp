@@ -1,5 +1,9 @@
 # AIMLResourcesApp
 
+-display Resource Roadmap, roughly equivalent to syllabus
+-display conceptual checkpoints for each resource
+-allow user to edit, cancel, add to both lists
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
 ## Development server
