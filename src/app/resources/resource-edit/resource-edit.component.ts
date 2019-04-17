@@ -46,7 +46,7 @@ export class ResourceEditComponent implements OnInit {
   }
 
   onAddConceptualCheckpoint() {
-    <FormArray>this.resourceForm.get('conceptualcheckpoints')).push(
+    (<FormArray>this.resourceForm.get('conceptualcheckpoints')).push(
       new FormGroup({
         "name": new FormControl(null, [
           Validators.required, 
