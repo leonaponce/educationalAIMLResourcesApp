@@ -12,16 +12,16 @@ export class ResourceService {
   
     private resources: Resource[] = [
         new Resource(
-          "Kaggle Python Mini-Course",
-          "Delve into Data Science's the most important language",
+          "Python Mini-Course",
+          "Kaggle introduces you to Data Science's the most important language",
           "https://freeicons.io/laravel/public/uploads/icons/png/6000503251553667373-128.png",
           [
             new ConceptualCheckpoint ("Python Basics",1),
             new ConceptualCheckpoint ("Python Practice",1) 
           ]),
         new Resource(
-          "Kaggle Machine Learning Mini-Course",
-          "Explore Data Science's hottest field", 
+          "Machine Learning Mini-Course",
+          "Explore the hottest field within Data Science", 
           "https://freeicons.io/laravel/public/uploads/icons/png/18589158161548402157-128.png",
           [
             new ConceptualCheckpoint ("Machine Learning Basics",1),
