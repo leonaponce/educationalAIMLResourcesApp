@@ -14,5 +14,3 @@ export class ResourcesComponent implements OnInit {
   }
     
 }
-
- 
