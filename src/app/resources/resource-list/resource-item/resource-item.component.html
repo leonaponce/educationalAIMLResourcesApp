@@ -1,4 +1,4 @@
-<a 
+<a
   style="cursor: pointer;"
   [routerLink]="[index]"
   routerLinkActive="active"
@@ -8,11 +8,10 @@
     <p class="list-group-item-text">{{ resource.description }}</p>
   </div>
   <span class="pull-right">
-    <img
-      [src]="resource.imagePath"
-      alt="{{ resource.name }}"
-      class="img-responsive"
-      style="max-height: 50px;"> 
-  </span>
+        <img
+          [src]="resource.imagePath"
+          alt="{{ resource.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
 </a>
-
