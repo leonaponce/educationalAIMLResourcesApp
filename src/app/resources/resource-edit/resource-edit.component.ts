@@ -48,25 +48,17 @@ export class ResourceEditComponent implements OnInit {
   onAddConceptualCheckpoint() {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).push(
       new FormGroup({
-        "name": new FormControl(null, [
-          Validators.required, 
-          Validators.pattern(/^[1-9]+[0-9]*$/)
-        ]), 
-        "amount": new FormControl(null, [
-          Validators.required, 
+        'name': new FormControl(null, Validators.required),
+        'amount': new FormControl(null, [
+          Validators.required,
           Validators.pattern(/^[1-9]+[0-9]*$/)
         ])
       })
     );
   }
 
-  getControls() {
-    return (<FormArray>this.resourceForm.get('conceptualcheckpoints')).controls;
-  }
-
   onDeleteConceptualCheckpoint(index: number) {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).removeAt(index);
-   
   }
 
   onCancel() {
@@ -79,25 +71,25 @@ export class ResourceEditComponent implements OnInit {
     let resourceDescription = '';
     let resourceConceptualCheckpoints = new FormArray([]);
 
-  if (this.editMode) {
-    const resource = this.resourceService.getResource(this.id);
-    resourceName = resource.name;
-    resourceImagePath = resource.imagePath;
-    resourceDescription = resource.description;
-    if (resource['resources']) {
-      for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
-        resourceConceptualCheckpoints.push(
-          new FormGroup({
-            "name": new FormControl(resource.name, Validators.required),
-            "amount": new FormControl(conceptualcheckpoint.amount, [
-              Validators.required, 
-              Validators.pattern(/^[1-9]+[0-9]*$/)
-            ])
-          })
-        );
+    if (this.editMode) {
+      const resource = this.resourceService.getResource(this.id);
+      resourceName = resource.name;
+      resourceImagePath = resource.imagePath;
+      resourceDescription = resource.description;
+      if (resource['conceptualcheckpoints']) {
+        for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
+          resourceConceptualCheckpoints.push(
+            new FormGroup({
+              "name": new FormControl(conceptualcheckpoint.name, Validators.required),
+              "amount": new FormControl(conceptualcheckpoint.amount, [
+                Validators.required, 
+                Validators.pattern(/^[1-9]+[0-9]*$/)
+              ])
+            })
+          );
+        }
       }
     }
-  }
 
   this.resourceForm = new FormGroup({
     'name' : new FormControl(resourceName, Validators.required),
