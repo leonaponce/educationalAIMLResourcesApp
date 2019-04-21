@@ -39,4 +39,3 @@ export class ResourceListComponent implements OnInit, OnDestroy  {
   }
 }
 
-//check in on router import
