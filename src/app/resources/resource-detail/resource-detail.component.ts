@@ -14,9 +14,8 @@ export class ResourceDetailComponent implements OnInit {
   id: number;
 
   constructor(private resourceService: ResourceService,
-              private route:ActivatedRoute,
+              private route: ActivatedRoute,
               private router: Router) {
-
   }
     
   ngOnInit() {
@@ -35,6 +34,7 @@ export class ResourceDetailComponent implements OnInit {
 
   onEditResource() {
     this.router.navigate(['edit'], {relativeTo: this.route});
+     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
   onDeleteResource() {
@@ -44,4 +44,3 @@ export class ResourceDetailComponent implements OnInit {
 
 }
 
-//router and params not imported
