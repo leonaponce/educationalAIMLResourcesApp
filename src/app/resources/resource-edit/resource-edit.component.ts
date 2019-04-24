@@ -4,7 +4,6 @@ import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { ResourceService } from '../resource.service';
 
-
 @Component({
   selector: 'app-resource-edit',
   templateUrl: './resource-edit.component.html',
@@ -13,29 +12,29 @@ import { ResourceService } from '../resource.service';
 export class ResourceEditComponent implements OnInit {
   id: number;
   editMode = false;
-  resourceForm: FormGroup;
+  recipeForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
-              private resourceService: ResourceService, 
+              private recipeService: ResourceService,
               private router: Router) {
   }
 
   ngOnInit() {
     this.route.params
-       .subscribe(
-         (params: Params) => {
-            this.id = +params['id'];
-            this.editMode = params['id'] !=null;
-            this.initForm();
-         }
-       );
+      .subscribe(
+        (params: Params) => {
+          this.id = +params['id'];
+          this.editMode = params['id'] != null;
+          this.initForm();
+        }
+      );
   }
 
   onSubmit() {
     // const newResource = new Resource(
-    //   this.resourceForm.value['name'], 
-    //   this.resourceForm.value['description']);
-    //   this.resourceForm.value['imagePath']);
+    //   this.resourceForm.value['name'],
+    //   this.resourceForm.value['description'],
+    //   this.resourceForm.value['imagePath'],
     //   this.resourceForm.value['conceptualcheckpoints']);
     if (this.editMode) {
       this.resourceService.updateResource(this.id, this.resourceForm.value);
@@ -80,9 +79,9 @@ export class ResourceEditComponent implements OnInit {
         for (let conceptualcheckpoint of resource.conceptualcheckpoints) {
           resourceConceptualCheckpoints.push(
             new FormGroup({
-              "name": new FormControl(conceptualcheckpoint.name, Validators.required),
-              "amount": new FormControl(conceptualcheckpoint.amount, [
-                Validators.required, 
+              'name': new FormControl(conceptualcheckpoint.name, Validators.required),
+              'amount': new FormControl(conceptualcheckpoint.amount, [
+                Validators.required,
                 Validators.pattern(/^[1-9]+[0-9]*$/)
               ])
             })
@@ -91,13 +90,14 @@ export class ResourceEditComponent implements OnInit {
       }
     }
 
-  this.resourceForm = new FormGroup({
-    'name' : new FormControl(resourceName, Validators.required),
-    'imagePath' : new FormControl(resourceImagePath, Validators.required),
-    'description' : new FormControl(resourceDescription, Validators.required),
-    'conceptualcheckpoints' : resourceConceptualCheckpoints
-  });
- }
+    this.resourceForm = new FormGroup({
+      'name': new FormControl(resourceName, Validators.required),
+      'imagePath': new FormControl(resourceImagePath, Validators.required),
+      'description': new FormControl(resourceDescription, Validators.required),
+      'conceptualcheckpoints': resourceConceptualCheckpoints
+    });
+  }
 
 }
+
 
