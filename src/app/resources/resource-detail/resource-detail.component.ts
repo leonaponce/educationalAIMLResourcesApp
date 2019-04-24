@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
+
 
 @Component({
   selector: 'app-resource-detail',
@@ -34,7 +35,7 @@ export class ResourceDetailComponent implements OnInit {
 
   onEditResource() {
     this.router.navigate(['edit'], {relativeTo: this.route});
-     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
   onDeleteResource() {
@@ -43,4 +44,3 @@ export class ResourceDetailComponent implements OnInit {
   }
 
 }
-
