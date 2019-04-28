@@ -5,7 +5,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 import { ConceptualCheckpoint } from '../../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap.service';

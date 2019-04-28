@@ -1,5 +1,5 @@
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
-import { Subject } from "rxjs";
+import { Subject } from 'rxjs/Subject';
 
 export class ResourceRoadmapService {
     conceptualcheckpointsChanged = new Subject<ConceptualCheckpoint[]>();
@@ -23,8 +23,8 @@ export class ResourceRoadmapService {
     }
 
     addConceptualCheckpoints(conceptualcheckpoints: ConceptualCheckpoint[]){
-      // for (let ingredient of ingredients) {
-      //   this.addIngredient(ingredient);
+      // for (let conceptualcheckpoint of conceptualcheckpoints) {
+      //   this.addConceptualCheckpoint(conceptualcheckpoint);
       // }
       this.conceptualcheckpoints.push(...conceptualcheckpoints);
       this.conceptualcheckpointsChanged.next(this.conceptualcheckpoints.slice());
