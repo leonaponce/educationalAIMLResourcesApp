@@ -57,7 +57,7 @@
         <div class="col-xs-12" formArrayName="concptualcheckpoints">
           <div
             class="row"
-            *ngFor="let concptualcheckpointCtrl of resourceForm.get('concptualcheckpoints').controls; let i = index"
+            *ngFor="let concptualcheckpointCtrl of resourceForm.get('conceptualcheckpoints').controls; let i = index"
             [formGroupName]="i"
             style="margin-top: 10px;">
             <div class="col-xs-8">
@@ -76,7 +76,7 @@
               <button
                 type="button"
                 class="btn btn-danger"
-                (click)="onDeleteConcptualCheckpoint(i)">X</button>
+                (click)="onDeleteConceptualCheckpoint(i)">X</button>
             </div>
           </div>
           <hr>
@@ -85,7 +85,7 @@
               <button
                 type="button"
                 class="btn btn-success"
-                (click)="onAddConcptualCheckpoint()">Add Concptual Checkpoint</button>
+                (click)="onAddConceptualCheckpoint()">Add Concptual Checkpoint</button>
             </div>
           </div>
         </div>

@@ -12,10 +12,10 @@ import { ResourceService } from '../resource.service';
 export class ResourceEditComponent implements OnInit {
   id: number;
   editMode = false;
-  recipeForm: FormGroup;
+  resourceForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
-              private recipeService: ResourceService,
+              private resourceService: ResourceService,
               private router: Router) {
   }
 

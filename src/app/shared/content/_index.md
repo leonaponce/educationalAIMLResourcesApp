@@ -54,7 +54,7 @@ projects:
     class: wide-col
     image:
       url: img/food_746x590.jpg
-      alt_text: The Food website for recipes
+      alt_text: The Food website for resources
       responsive_sources:
         "848": img/food_848x443.jpg
         "565": img/food_565x420.jpg

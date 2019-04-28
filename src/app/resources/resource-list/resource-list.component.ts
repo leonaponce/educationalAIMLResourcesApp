@@ -26,7 +26,7 @@ export class ResourceListComponent implements OnInit, OnDestroy {
           this.resources = resources;
         }
       );
-    this.resources = this.resourceService.getResource();
+    this.resources = this.resourceService.getResources();
   }
 
   onNewResource() {
