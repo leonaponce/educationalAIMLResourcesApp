@@ -10,6 +10,7 @@ import { Resource } from '../../resource.model';
 export class ResourceItemComponent implements OnInit {
   @Input() resource: Resource;
   @Input() index: number;
+
   ngOnInit() {
   }
 }
