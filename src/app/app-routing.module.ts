@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { ResourcesComponent } from './resources/resources.component';
 import { ResourceRoadmapComponent } from './resource-roadmap/resource-roadmap.component';
