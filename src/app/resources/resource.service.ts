@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { Resource } from './resource.model';
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
@@ -13,7 +13,7 @@ export class ResourceService {
     private resources: Resource[] = [
         new Resource(
           "Python Mini-Course",
-          "Kaggle introduces you to Data Science's the most important language",
+          "Kaggle introduces you to Data Science's most important language",
           "https://freeicons.io/laravel/public/uploads/icons/png/6000503251553667373-128.png",
           [
             new ConceptualCheckpoint ("Python Basics",1),
