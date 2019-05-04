@@ -35,7 +35,6 @@ export class ResourceDetailComponent implements OnInit {
 
   onEditResource() {
     this.router.navigate(['edit'], {relativeTo: this.route});
-    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
   onDeleteResource() {

@@ -40,14 +40,6 @@ export class RoadmapEditComponent implements OnInit, OnDestroy {
        );
   }
   
-  minValue() {
-    let formArray = (this.resourceForm.controls['conceptualcheckpoints']);
-    formArray.controls.forEach(control => {
-      if (+control.get('amount').value < 1 || isNaN(+control.get('amount').value)) {
-        control.get('amount').setValue(1);
-      }
-    });
-  }
 
   onSubmit(form: NgForm) {
     const value = form.value;
