@@ -54,10 +54,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12" formArrayName="concptualcheckpoints">
+        <div class="col-xs-12" formArrayName="conceptualcheckpoints">
           <div
             class="row"
-            *ngFor="let concptualcheckpointCtrl of resourceForm.get('conceptualcheckpoints').controls; let i = index"
+            *ngFor="let conceptualcheckpointCtrl of resourceForm.get('conceptualcheckpoints').controls; let i = index"
             [formGroupName]="i"
             style="margin-top: 10px;">
             <div class="col-xs-8">
@@ -83,9 +83,9 @@
           <div class="row">
             <div class="col-xs-12">
               <button
-                type="button"
-                class="btn btn-success"
-                (click)="onAddConceptualCheckpoint()">Add Concptual Checkpoint</button>
+              type="button"
+              class="btn btn-success"
+              (click)="onAddConceptualCheckpoint()">Add Conceptual Checkpoint</button>
             </div>
           </div>
         </div>
@@ -93,10 +93,3 @@
     </form>
   </div>
 </div>
-
-
-<!--
-    class="row"
-            *ngFor="let conceptualcheckpointCtrl of resourceForm.get('conceptualcheckpoints').controls; let i = index"
-            [formGroupName]="i"
--->
