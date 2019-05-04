@@ -8,7 +8,7 @@ import { Resource } from '../../resource.model';
   styleUrls: ['./resourceitem.component.css']
 })
 export class ResourceItemComponent implements OnInit {
-  @Input() recipe: Resource;
+  @Input() resource: Resource;
   @Input() index: number;
 
   ngOnInit() {

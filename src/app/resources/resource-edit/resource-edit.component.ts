@@ -56,7 +56,7 @@ export class ResourceEditComponent implements OnInit {
     );
   }
 
-  onDeleteIngredient(index: number) {
+  onDeleteConceptualCheckpoint(index: number) {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).removeAt(index);
   }
 
