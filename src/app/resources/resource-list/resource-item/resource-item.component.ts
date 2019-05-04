@@ -4,11 +4,11 @@ import { Resource } from '../../resource.model';
 
 @Component({
   selector: 'app-resource-item',
-  templateUrl: './resource-item.component.html',
-  styleUrls: ['./resource-item.component.css']
+  templateUrl: './resourceitem.component.html',
+  styleUrls: ['./resourceitem.component.css']
 })
 export class ResourceItemComponent implements OnInit {
-  @Input() resource: Resource;
+  @Input() recipe: Resource;
   @Input() index: number;
 
   ngOnInit() {
