@@ -56,7 +56,7 @@ export class ResourceEditComponent implements OnInit {
     );
   }
 
-  onDeleteConceptualCheckpoint(index: number) {
+  onDeleteIngredient(index: number) {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).removeAt(index);
   }
 
@@ -99,5 +99,3 @@ export class ResourceEditComponent implements OnInit {
   }
 
 }
-
-
