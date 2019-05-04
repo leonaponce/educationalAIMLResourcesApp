@@ -1,6 +1,6 @@
 # AIMLResourcesApp
 
--display Resource Roadmap, roughly equivalent to syllabus
+-display Resource Roadmap, roughly equivalent to syllabus<br>
 -display conceptual checkpoints for each resource
 -allow user to edit, cancel, add to both lists
 -3 pages total avaiable to user
