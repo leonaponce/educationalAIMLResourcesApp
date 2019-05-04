@@ -1,69 +1,58 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject } from 'rxjs/Subject';
 
 import { Resource } from './resource.model';
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap/resource-roadmap.service';
 
-
 @Injectable()
 export class ResourceService {
-    resourcesChanged = new Subject<Resource[]>();
-  
-    private resources: Resource[] = [
-        new Resource(
-          "Python Mini-Course",
-          "Kaggle introduces you to Data Science's most important language",
-          "https://freeicons.io/laravel/public/uploads/icons/png/6000503251553667373-128.png",
-          [
-            new ConceptualCheckpoint ("Python Basics",1),
-            new ConceptualCheckpoint ("Python Practice",1) 
-          ]),
-        new Resource(
-          "Machine Learning Mini-Course",
-          "Explore the hottest field within Data Science", 
-          "https://freeicons.io/laravel/public/uploads/icons/png/18589158161548402157-128.png",
-          [
-            new ConceptualCheckpoint ("Machine Learning Basics",1),
-            new ConceptualCheckpoint ("Machine Learning Practice",1) 
-          ]),
-          new Resource(
-           "Kaggle Deep Learning Mini-Course", 
-           "Learn about Tensorflow, the core open source ML library", 
-           "https://freeicons.io/laravel/public/uploads/icons/png/19350075911548402146-64.png",
-          [
-            new ConceptualCheckpoint ("Tensorflow Basics",1),
-            new ConceptualCheckpoint ("Tensorflow Practice",1) 
-          ])
-       ];
+  resourcesChanged = new Subject<Resource[]>();
 
-      constructor(private slService: ResourceRoadmapService) {}
+  private resources: Resource[] = [
+    new Resource(
+      'Intro to Python',
+      'Start utlizing this vital programming language',
+      'https://www.technotification.com/wp-content/uploads/2018/04/python-is-the-best-programming-770x515.jpg',
+      [
+        new ConceptualCheckpoint('Python Basics', 1),
+        new ConceptualCheckpoint('Python Practice', 1)
+      ]),
+    new Resource('Intro to Machine Learning',
+      'Explore the hottest field in Data Science',
+      'https://mk0wittysparksm75pi6.kinstacdn.com/wp-content/uploads/2017/08/Machine-Learning-768x480.jpg',
+      [
+        new ConceptualCheckpoint('Machine Learning Basics', 1),
+        new ConceptualCheckpoint('Machine Learning Practice', 1)
+      ])
+  ];
 
-      getResources() {
-        return this.resources.slice();
-      }
+  constructor(private slService: ResourceRoadmapService) {}
 
-      getResource(index: number) { 
-        return this.resources[index];
-      }
+  getResources() {
+    return this.resources.slice();
+  }
 
-      addConceptualCheckpointsToResourceRoadmap(conceptualcheckpoints: ConceptualCheckpoint[]) {
-         this.slService.addConceptualCheckpoints(conceptualcheckpoints);
-      }
+  getResource(index: number) {
+    return this.resources[index];
+  }
 
-      addResource(resource: Resource) {
-        this.resources.push(resource);
-        this.resourcesChanged.next(this.resources.slice());
-      }
+  addConceptualCheckpointsToResourceRoadmap(conceptualcheckpoints: ConceptualCheckpoint[]) {
+    this.slService.addConceptualCheckpoints(conceptualcheckpoints);
+  }
 
-      updateResource(index: number, newResource: Resource) {
-        this.resources[index] = newResource; 
-        this.resourcesChanged.next(this.resources.slice()); 
-      }
+  addResource(resource: Resource) {
+    this.resources.push(resource);
+    this.resourcesChanged.next(this.resources.slice());
+  }
 
-      deleteResource(index: number) {
-        this.resources.splice(index, 1);
-        this.resourcesChanged.next(this.resources.slice());
-      }
+  updateResource(index: number, newResource: Resource) {
+    this.resources[index] = newResource;
+    this.resourcesChanged.next(this.resources.slice());
+  }
+
+  deleteResource(index: number) {
+    this.resources.splice(index, 1);
+    this.resourcesChanged.next(this.resources.slice());
+  }
 }
-
