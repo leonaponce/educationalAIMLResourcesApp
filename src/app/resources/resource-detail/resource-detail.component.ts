@@ -4,7 +4,6 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Resource } from '../resource.model';
 import { ResourceService } from '../resource.service';
 
-
 @Component({
   selector: 'app-resource-detail',
   templateUrl: './resource-detail.component.html',
@@ -18,7 +17,7 @@ export class ResourceDetailComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router) {
   }
-    
+
   ngOnInit() {
     this.route.params
       .subscribe(
@@ -35,6 +34,7 @@ export class ResourceDetailComponent implements OnInit {
 
   onEditResource() {
     this.router.navigate(['edit'], {relativeTo: this.route});
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
   onDeleteResource() {
