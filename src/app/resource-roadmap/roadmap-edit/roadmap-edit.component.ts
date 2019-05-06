@@ -11,9 +11,9 @@ import { ConceptualCheckpoint } from '../../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap.service';
 
 @Component({
-  selector: 'app-roadmap-edit',
-  templateUrl: './roadmap-edit.component.html',
-  styleUrls: ['./roadmap-edit.component.css']
+  selector: 'app-resource-edit',
+  templateUrl: './resource-edit.component.html',
+  styleUrls: ['./resource-edit.component.css']
 })
 export class ResourceEditComponent implements OnInit, OnDestroy {
   @ViewChild('f') slForm: NgForm;
@@ -66,4 +66,3 @@ export class ResourceEditComponent implements OnInit, OnDestroy {
   }
 
 }
-
