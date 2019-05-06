@@ -15,7 +15,7 @@ import { ResourceRoadmapService } from '../resource-roadmap.service';
   templateUrl: './resource-edit.component.html',
   styleUrls: ['./resource-edit.component.css']
 })
-export class ResourceEditComponent implements OnInit, OnDestroy {
+export class RoadmapEditComponent implements OnInit, OnDestroy {
   @ViewChild('f') slForm: NgForm;
   subscription: Subscription;
   editMode = false;

@@ -43,4 +43,3 @@ import { ResourceService } from './resources/resource.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
