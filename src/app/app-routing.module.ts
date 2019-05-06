@@ -10,10 +10,10 @@ import { ResourceEditComponent } from './resources/resource-edit/resource-edit.c
 const appRoutes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },
   { path: 'resources', component: ResourcesComponent, children: [
-    { path: '', component: ResourceStartComponent},
+    { path: '', component: ResourceStartComponent },
     { path: 'new', component: ResourceEditComponent },
-    { path: ':id', component: ResourceDetailComponent},
-    { path: ':id/edit', component: ResourceEditComponent } 
+    { path: ':id', component: ResourceDetailComponent },
+    { path: ':id/edit', component: ResourceEditComponent },
   ] },
   { path: 'resource-roadmap', component: ResourceRoadmapComponent },
 ];
@@ -25,4 +25,3 @@ const appRoutes: Routes = [
 export class AppRoutingModule {
 
 }
-
