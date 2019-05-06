@@ -19,17 +19,17 @@ export class ResourceRoadmapComponent implements OnInit, OnDestroy {
     this.conceptualcheckpoints = this.slService.getConceptualCheckpoints();
     this.subscription = this.slService.conceptualcheckpointsChanged
       .subscribe(
-         (conceptualcheckpoints: ConceptualCheckpoint[]) => {
-           this.conceptualcheckpoints = conceptualcheckpoints;
-         }
+        (conceptualcheckpoints: ConceptualCheckpoint[]) => {
+          this.conceptualcheckpoints = conceptualcheckpoints;
+        }
       );
   }
 
   onEditItem(index: number) {
-    this.slService.startedEditing.next(index)
+    this.slService.startedEditing.next(index);
   }
 
-  ngOnDestroy () {
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 }
