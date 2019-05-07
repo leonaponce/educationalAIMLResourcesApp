@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-roadmap-edit></app-roadmap-edit>
+    <app-roadmap-edit></app-shopping-edit>
     <hr>
     <ul class="list-group">
       <a
         class="list-group-item"
         style="cursor: pointer"
-        *ngFor="let conceptualcheckpointt of conceptualcheckpoints; let i = index"
+        *ngFor="let conceptualcheckpoint of conceptualcheckpoints; let i = index"
         (click)="onEditItem(i)"
       >
         {{ conceptualcheckpoint.name }} ({{ conceptualcheckpoint.amount }})
@@ -14,4 +14,3 @@
     </ul>
   </div>
 </div>
-
