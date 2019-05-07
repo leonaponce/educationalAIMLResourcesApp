@@ -5,8 +5,7 @@ export class ResourceRoadmapService {
   conceptualcheckpointsChanged = new Subject<ConceptualCheckpoint[]>();
   startedEditing = new Subject<number>();
   private conceptualcheckpoints: ConceptualCheckpoint[] = [
-    new ConceptualCheckpoint('Machine Learning Basics', 5),
-    new ConceptualCheckpoint('Machine Learning Practice', 10),
+   
   ];
 
   getConceptualCheckpoints() {
