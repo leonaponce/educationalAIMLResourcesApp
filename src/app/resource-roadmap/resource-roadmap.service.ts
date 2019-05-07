@@ -1,5 +1,5 @@
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 export class ResourceRoadmapService {
   conceptualcheckpointsChanged = new Subject<ConceptualCheckpoint[]>();

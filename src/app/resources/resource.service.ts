@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { Resource } from './resource.model';
 import { ConceptualCheckpoint } from '../shared/conceptualcheckpoint.model';
@@ -20,7 +20,7 @@ export class ResourceService {
       ]),
     new Resource('Intro to Machine Learning',
       'Explore the hottest field in Data Science',
-      'https://mk0wittysparksm75pi6.kinstacdn.com/wp-content/uploads/2017/08/Machine-Learning-768x480.jpg',
+      'http://www.reach.ucsd.edu/sites/reachgroup.ucsd.edu/files/uploads/images/machine_learn.jpg',
       [
         new ConceptualCheckpoint('Machine Learning Basics', 1),
         new ConceptualCheckpoint('Machine Learning Practice', 1)

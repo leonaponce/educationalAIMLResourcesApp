@@ -4,8 +4,8 @@ import { Resource } from '../../resource.model';
 
 @Component({
   selector: 'app-resource-item',
-  templateUrl: './resourceitem.component.html',
-  styleUrls: ['./resourceitem.component.css']
+  templateUrl: './resource-item.component.html',
+  styleUrls: ['./resource-item.component.css']
 })
 export class ResourceItemComponent implements OnInit {
   @Input() resource: Resource;
