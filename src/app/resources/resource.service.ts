@@ -18,12 +18,12 @@ export class ResourceService {
         new ConceptualCheckpoint('Python Basics', 1),
         new ConceptualCheckpoint('Python Practice', 1)
       ]),
-    new Resource('Intro to Machine Learning',
+    new Resource('Intro to Deep Learning',
       'Explore the hottest field in Data Science',
       'http://www.reach.ucsd.edu/sites/reachgroup.ucsd.edu/files/uploads/images/machine_learn.jpg',
       [
-        new ConceptualCheckpoint('Machine Learning Basics', 1),
-        new ConceptualCheckpoint('Machine Learning Practice', 1)
+        new ConceptualCheckpoint('Deep Learning Basics', 1),
+        new ConceptualCheckpoint('Deep Learning Practice', 1)
       ])
   ];
 
