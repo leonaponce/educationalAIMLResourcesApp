@@ -5,17 +5,17 @@ import {
   ViewChild
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { ConceptualCheckpoint } from '../../shared/conceptualcheckpoint.model';
 import { ResourceRoadmapService } from '../resource-roadmap.service';
 
 @Component({
-  selector: 'app-roadmap-edit',
-  templateUrl: './roadmap-edit.component.html',
-  styleUrls: ['./roadmap-edit.component.css']
+  selector: 'app-resource-edit',
+  templateUrl: './resource-edit.component.html',
+  styleUrls: ['./resource-edit.component.css']
 })
-export class RoadmapEditComponent implements OnInit, OnDestroy {
+export class ResourceEditComponent implements OnInit, OnDestroy {
   @ViewChild('f') slForm: NgForm;
   subscription: Subscription;
   editMode = false;
