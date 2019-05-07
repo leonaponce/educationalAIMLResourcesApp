@@ -2,9 +2,10 @@
 
 -display Resource Roadmap, roughly equivalent to syllabus<br>
 -display conceptual checkpoints for each resource<br>
--allow user to edit, cancel, add to both lists<br>
+-allow user to edit, cancel, add to both conceptual checkpoints list and Resource Roadmap<br>
 -3 pages total avaiable to user<br>
 -Access Twitter API to display 10 tweets to user from five authorities on Futurism<br>
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
