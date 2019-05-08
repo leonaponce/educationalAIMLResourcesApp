@@ -39,6 +39,13 @@ export class RoadmapEditComponent implements OnInit, OnDestroy {
       );
   }
 
+
+  validateInput(field) {
+
+    this.slForm.patchValue({ [field.id]: this.slForm.controls[field.id].value }); 
+  
+  }
+
   onSubmit(form: NgForm) {
     const value = form.value;
     const newConceptualCheckpoint = new ConceptualCheckpoint(value.name, value.amount);
