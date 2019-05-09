@@ -48,13 +48,20 @@ export class ResourceEditComponent implements OnInit {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).push(
       new FormGroup({
         'name': new FormControl(null, Validators.required),
-        'amount': new FormControl(
-          {value: field.value}, 
-          [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)
-        ])
+        'amount': new FormControl(null, Validators.required)
       })
     );
   }
+
+@ViewChild('input') input;
+ 
+min() {
+  const inputElement = this.input.nativeElement;   
+  const value = inputElement.value;
+    if (+value === 0 || isNaN(+value)) {
+      inputElement.value = '';
+    }
+}
 
   onDeleteConceptualCheckpoint(index: number) {
     (<FormArray>this.resourceForm.get('conceptualcheckpoints')).removeAt(index);
