@@ -15,12 +15,14 @@
         </div>
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
-          <input matInput 
-          (input)= "validateInput(field)" 
-          [placeholder]="field.label" 
-          type= "number" 
-          [formControlName]="field.id" 
-          [id]="field.id"
+          <input #input (keyup)="min()"
+            type="number"
+            id="amount"
+            class="form-control"
+            name="amount"
+            ngModel
+            required
+            pattern="^[1-9]+[0-9]*$"
           >
         </div>
       </div>

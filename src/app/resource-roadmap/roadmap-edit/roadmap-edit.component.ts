@@ -39,13 +39,15 @@ export class RoadmapEditComponent implements OnInit, OnDestroy {
       );
   }
 
-
-  validateInput(field) {
-
-    this.slForm.patchValue({ [field.id]: this.slForm.controls[field.id].value }); 
-  
-  }
-
+@ViewChild('input') input;
+ 
+min() {
+  const inputElement = this.input.nativeElement;   
+  const value = inputElement.value;
+    if (+value === 0 || isNaN(+value)) {
+      inputElement.value = '';
+    }
+}
   onSubmit(form: NgForm) {
     const value = form.value;
     const newConceptualCheckpoint = new ConceptualCheckpoint(value.name, value.amount);
