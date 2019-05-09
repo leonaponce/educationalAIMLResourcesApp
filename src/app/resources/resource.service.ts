@@ -12,7 +12,7 @@ export class ResourceService {
   private resources: Resource[] = [
     new Resource(
       'Intro to Python',
-      'Start utlizing this vital programming language',
+      'Start utilizing this vital programming language',
       'https://www.technotification.com/wp-content/uploads/2018/04/python-is-the-best-programming-770x515.jpg',
       [
         new ConceptualCheckpoint('Python Basics', 1),
